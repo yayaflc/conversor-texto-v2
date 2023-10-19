@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --josefin: 'Josefin Sans', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+}
+
+[data-theme="light"] {
+    --card-color: #78635A;
+    --bg-color: #c7a291;
+    --tittle-color: #262626;
+    --text-color: #262626;
+    --placeholder: #bdbdbd;
+    --btn-hover-color: #5b5655;
+    --btn-icon-theme: #000;
+    --btn-hover-icon: #ffffffcd;
+    --btn-color: #797371;
+}
+
+[data-theme="dark"] {
+    --card-color:#636363;
+    --bg-color:#262626;
+    --tittle-color: #AA8B7D;
+    --text-color: #E0E0E0;
+    --placeholder: #bdbdbd;
+    --btn-hover-color: #78635A;
+    --btn-icon-theme: #fff;
+    --btn-hover-icon: #323232c4;
+    --btn-color: #AA8B7D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+
+/* header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 60px 120px 0 0;
+} */
+
+/* .btn-theme {
+    border: none;
+    background: var(--btn-hover-icon);
+    border-radius: 50px;
+    cursor: pointer;
+    color: var(--btn-icon-theme);
+    font-size: 40px !important;
+    padding: 2px;
+} */
+
+h1 {
+    color: var(--tittle-color);
+    font-family: var(--josefin);
+    font-weight: 700;
+    font-size: 64px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 100px;
+}
+
+::placeholder {
+    color: var(--placeholder);
+}
+
+textarea {
+    color: var(--text-color);
+    background-color: var(--card-color);
+    font-family: var(--poppins);
+    font-weight: 40px;
+    font-size: 24px;
+    width: 700px;
+    max-width: 700px;
+    min-width: 700px;
+    height: 40px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* .container > form > .buttons > button {
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    font-family: var(--josefin);
+    font-size: 28px;
+    width: 200px;
+    height: 52px;
+    border-radius: 10px;
+    border: none;
+}
+
+.container > form > .buttons > button:hover {
+    background-color: var(--btn-hover-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.6s;
+} */
+
+#result {
+    color: var(--text-color);
+    background-color: var(--card-color);
+    font-family: var(--poppins);
+    font-weight: 40px;
+    font-size: 24px;
+    width: 700px;
+    height: 300px;
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 880px) {
+    h1 {
+        font-size: 48px;
+        padding-top: 80px;
+    }
+
+    textarea {
+        font-size: 24px;
+        width: 500px;
+        max-width: 500px;
+        min-width: 500px;
+    }
+
+    #result {
+        font-size: 24px;
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 580px) {
+    h1 {
+        font-size: 32px;
+        padding-top: 60px;
+    }
+
+    textarea {
+        font-size: 20px;
+        width: 320px;
+        max-width: 320px;
+        min-width: 320px;
+    }
+
+    #result {
+        font-size: 20px;
+        width: 320px;
+        height: 300px;
+    }
+
+    header {
+        padding: 40px 40px 0 0;
+    }
+
+    .btn-theme {
+        font-size: 30px !important;
+
+    }
+}

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --josefin: 'Josefin Sans', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+}
+
+[data-theme="light"] {
+    --text-color: #262626;
+    --placeholder: #bdbdbd;
+    --btn-hover-color: #5b5655;
+    --btn-color: #797371;
+}
+
+[data-theme="dark"] {
+    --text-color: #E0E0E0;
+    --placeholder: #bdbdbd;
+    --btn-hover-color: #78635A;
+    --btn-color: #AA8B7D;
+}
+
+.buttonConverter {
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    font-family: var(--josefin);
+    font-size: 28px;
+    width: 200px;
+    height: 52px;
+    border-radius: 10px;
+    border: none;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttonConverter:hover {
+    background-color: var(--btn-hover-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+@media (max-width: 880px) {
+    .buttonConverter {
+        font-size: 24px;
+       width: 170px;
+    }
+}
+
+@media (max-width: 580px) {
+    .buttonConverter {
+        font-size: 18px;
+        width: 110px;
+    }
+}

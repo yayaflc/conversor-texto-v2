@@ -1,9 +1,11 @@
 import Button from './Button';
+import './ButtonsContainer.css';
 
 function Event() {
     function convertUpperCase(event) {
         // preventDefault() faz com que utilize o evento padrão do navegador(javascript vanilla), não a do react
         event.preventDefault();
+
         const textArea = document.getElementById('text').value;
         const resultArea = document.getElementById('result');
         resultArea.innerHTML = textArea.toUpperCase();
@@ -11,6 +13,7 @@ function Event() {
 
     function convertLowerCase(event) {
         event.preventDefault();
+
         const textArea = document.getElementById('text').value;
         const resultArea = document.getElementById('result');
         resultArea.innerHTML = textArea.toLowerCase();
@@ -29,8 +32,8 @@ function Event() {
     }
 
     return (
-        <div>
-            <Button event={convertUpperCase} text="maíuscula" />
+        <div className="ButtonsContainer">
+            <Button event={convertUpperCase} text="maíuscula"></Button>
             <Button event={convertLowerCase} text="minuscula" />
             <Button event={convertSpecial} text="especial" />
         </div>
