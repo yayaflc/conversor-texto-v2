@@ -1,34 +1,23 @@
 import Button from './Button';
 import './ButtonsContainer.css';
 
-function Event() {
+function Event(props) {
     function convertUpperCase(event) {
-        // preventDefault() faz com que utilize o evento padrão do navegador(javascript vanilla), não a do react
-        event.preventDefault();
-
-        const textArea = document.getElementById('text').value;
-        const resultArea = document.getElementById('result');
-        resultArea.innerHTML = textArea.toUpperCase();
+        props.setResult(props.textArea.toUpperCase());
     }
 
     function convertLowerCase(event) {
-        event.preventDefault();
-
-        const textArea = document.getElementById('text').value;
-        const resultArea = document.getElementById('result');
-        resultArea.innerHTML = textArea.toLowerCase();
+        props.setResult(props.textArea.toLowerCase());
     }
 
     function convertSpecial(event) {
-        event.preventDefault();
+        const words = props.textArea.split(" ");
 
-        const textArea = document.getElementById('text').value;
-        const resultArea = document.getElementById('result');
-        const words = textArea.split(" ");
-
-        resultArea.innerHTML = words.map((word) => {
+        const result = words.map((word) => {
             return word.charAt(0).toUpperCase() + word.slice(1);
         }).join(" ");
+
+        props.setResult(result);
     }
 
     return (
